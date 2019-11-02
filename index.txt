@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head> 
+
+<h1 style="text-align: center, Times New Roman;"><em>An Adventure Through Our Eyes</em></h1>
+
+</head>
+
+
+
+
+
+
+
+ <div class="nav-scroller py-1 mb-2">
+
+    <nav class="nav d-flex justify-content-between">
+
+      <a class="p-2 text-muted" href="#">About Us</a>
+
+      <a class="p-2 text-muted" href="#">Stories</a>
+
+      <a class="p-2 text-muted" href="#">Art & Photography</a>
+
+      <a class="p-2 text-muted" href="#">Connection Section</a>
+
+      <a class="p-2 text-muted" href="#">Contact page</a>
+
+    </nav>
+	<body style = background-color: #ccccff;>
+  </div>
+
+
+
+</body>
+
+
+
+</html>
