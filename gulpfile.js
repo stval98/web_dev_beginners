@@ -23,25 +23,25 @@ function browserSyncReload(done) {
   done();
 }
 
-// Clean vendor
+// Clean external
 function clean() {
-  return del(["./vendor/"]);
+  return del(["./external/"]);
 }
 
-// Bring third party dependencies from node_modules into vendor directory
+// Bring third party dependencies from node_modules into external directory
 function modules() {
   // Bootstrap
   var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
-    .pipe(gulp.dest('./vendor/bootstrap'));
+    .pipe(gulp.dest('./external/bootstrap'));
   // jQuery
   var jquery = gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-    .pipe(gulp.dest('./vendor/jquery'));
+    .pipe(gulp.dest('./external/jquery'));
   // jQuery Easing
   var jqueryEasing = gulp.src('./node_modules/jquery.easing/*.js')
-    .pipe(gulp.dest('./vendor/jquery-easing'));
+    .pipe(gulp.dest('./external/jquery-easing'));
   return merge(bootstrap, jquery, jqueryEasing);
 }
 
@@ -52,13 +52,13 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor);
+const external = gulp.series(clean, modules);
+const build = gulp.series(external);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.clean = clean;
-exports.vendor = vendor;
+exports.external = external;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
