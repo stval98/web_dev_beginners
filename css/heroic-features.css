@@ -1,0 +1,17 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+ 
+body {
+  padding-top: 56px;
+  background-image: url("color.jpg");
+  background-repeat: repeat-x;
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
